@@ -1,0 +1,15 @@
+#Passwrod Strong Checker
+import re
+
+password=input("Enter Your Password: ")
+
+if(len(password)<8):
+    print("Passwrod Must be 8 letters")
+elif not re.search("[A-Z]",password):
+    print("Password Must Be One Upper Case")
+elif not re.search("[a-z]",password):
+    print("Password Must Be One Lower Case")
+elif not re.search("[0-9]",password):
+    print("Password Must Be One Number")
+else:
+    print("Password Is Strong")
